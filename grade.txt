@@ -30,15 +30,18 @@ tester_spiral_matrix
 At least one test in this suite failed.
     _given: Failed
     degenerate: Failed
-    dims_both_even: Exception
-    dims_both_odd: Exception
-    dims_odd_even: Exception
+    dims_both_even: Failed
+    dims_both_odd: Failed
+    dims_even_square: Failed
+    dims_odd_even: Failed
+    dims_odd_square: Failed
 
 tester_subset_sum
 At least one test in this suite failed.
     _given: Failed
     element_multi: Failed
     more: Failed
+    negatives: Failed
 
 Additional messages:
 You did not fill out `netid.txt` properly! We cannot assign you a grade!
