@@ -1,13 +1,13 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Total points earned: 0
+Total points earned: 17
 
 Detailed test results:
 
 tester_matrix_multiply
 At least one test in this suite failed.
     _given: Failed
-    dim_mismatch: Failed
+    dim_mismatch: Correct
     more: Failed
 
 tester_nth_largest_element
@@ -19,29 +19,26 @@ At least one test in this suite failed.
 
 tester_reverse_block
 At least one test in this suite failed.
-    _given: Failed
-    large: Failed
-    large_offset: Failed
-    small: Failed
-    small_offset: Failed
+    _given: Correct
+    large: Correct
+    large_offset: Correct
+    small: Correct
+    small_offset: Correct
     vacuous: Failed
 
 tester_spiral_matrix
-At least one test in this suite failed.
-    _given: Failed
-    degenerate: Failed
-    dims_both_even: Failed
-    dims_both_odd: Failed
-    dims_even_square: Failed
-    dims_odd_even: Failed
-    dims_odd_square: Failed
+    _given: Correct
+    degenerate: Correct
+    dims_both_even: Correct
+    dims_both_odd: Correct
+    dims_even_square: Correct
+    dims_odd_even: Correct
+    dims_odd_square: Correct
 
 tester_subset_sum
-At least one test in this suite failed.
-    _given: Failed
-    element_multi: Failed
-    more: Failed
-    negatives: Failed
+    _given: Correct
+    element_multi: Correct
+    more: Correct
+    negatives: Correct
 
-Additional messages:
-You did not fill out `netid.txt` properly! We cannot assign you a grade!
+
