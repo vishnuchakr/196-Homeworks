@@ -1,21 +1,20 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Total points earned: 17
+Total points earned: 22
 
 Detailed test results:
 
 tester_matrix_multiply
-At least one test in this suite failed.
-    _given: Failed
+    _given: Correct
     dim_mismatch: Correct
-    more: Failed
+    more: Correct
 
 tester_nth_largest_element
 At least one test in this suite failed.
-    _given: Failed
+    _given: Correct
     large: Failed
-    more: Failed
-    n_too_large: Failed
+    more: Correct
+    n_too_large: Correct
 
 tester_reverse_block
 At least one test in this suite failed.
