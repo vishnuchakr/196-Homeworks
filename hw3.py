@@ -7,7 +7,15 @@ Return None if the matrix product does not exist.
 As with math, assume that indices are in [row][column] format, so each inner list is a row.
 """
 def matrix_multiply(arr0, arr1):
-	pass
+    
+    if (len(arr0[0]) != len(arr1) or len(arr1[0]) != len(arr0)):
+        return None
+    resultArray = [[0 for row in range(len(arr1[0]))] for col in range(len(arr0))]
+    for i in range(len(arr0)):
+        for j in range(len(arr1[0])):
+            for k in range(len(arr0[0])):
+                resultArray[i][j] += arr0[i][k] * arr1[k][j]
+    return resultArray
 
 """
 nth_largest_element
@@ -16,7 +24,16 @@ Given an input list `arr`, and index `n`, return the nth largest element.
 Avoid using built-in sorting methods.
 """
 def nth_largest_element(arr, n):
-	pass
+    if len(arr) == 0 or arr == None or n == 0:
+        return None
+    sort = False
+    while not sort:
+        sort = True
+        for i in range(len(arr) - 1):
+            if arr[i] > arr[i + 1]:
+                sort = False
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+    return arr[n - 1]
 
 """
 reverse_block
@@ -32,7 +49,22 @@ Example:
 
 """
 def reverse_block(arr, n):
-	pass
+    x = []
+    if arr == None:
+        return None
+    if n > len(arr):
+        return None
+    i = 0
+    while i < len(arr):
+        counter = 0
+        subarr = []
+        while i < len(arr) and counter < n:
+            subarr.append(arr[i])
+            i += 1
+            counter += 1
+        subarr.reverse()
+        x += subarr
+    return x
 
 """
 subset_sum
@@ -52,8 +84,15 @@ Example 2:
 	Return:
 		False
 """
+
 def subset_sum(arr, target):
-	pass
+    if len(arr) == 0:
+        return False
+    else:
+        if arr[0] == target:
+            return True
+        else:
+            return subset_sum(arr[1:],(target - arr[0])) or subset_sum(arr[1:], target)
 
 """
 spiral_matrix
@@ -71,5 +110,32 @@ Example:
 		[a,b,c,d,e, j,o,t,y, x,w,v,u, p,k,f, g,h,i, n,s, r,q, l, m]
 """
 def spiral_matrix(arr):
-	pass
-
+    k = 0
+    l = 0
+    m = len(arr)
+    n = len(arr[0])
+    
+    newArr = []
+    while (k < m and l < n):
+        for i in range(l, n):
+            newArr.append(arr[k][i])
+        
+        k += 1
+        
+        for i in range(k, m):
+            newArr.append(arr[i][n - 1])
+        
+        n -= 1
+        
+        if (k < m):
+            for i in range(n - 1, l - 1, -1):
+                newArr.append(arr[m - 1][i])
+                
+            m -= 1
+        
+        if (l < n):
+            for i in range(m - 1, k - 1, -1):
+                newArr.append(arr[i][l])
+                
+            l += 1
+    return newArr
