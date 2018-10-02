@@ -52,7 +52,7 @@ def reverse_block(arr, n):
     x = []
     if arr == None:
         return None
-    if n > len(arr):
+    if n > len(arr) or n == 0:
         return None
     i = 0
     while i < len(arr):
