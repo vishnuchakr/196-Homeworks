@@ -8,7 +8,7 @@ As with math, assume that indices are in [row][column] format, so each inner lis
 """
 def matrix_multiply(arr0, arr1):
     
-    if (len(arr0[0]) != len(arr1) or len(arr1[0]) != len(arr0)):
+    if (len(arr0[0]) != len(arr1)):
         return None
     resultArray = [[0 for row in range(len(arr1[0]))] for col in range(len(arr0))]
     for i in range(len(arr0)):
@@ -24,13 +24,13 @@ Given an input list `arr`, and index `n`, return the nth largest element.
 Avoid using built-in sorting methods.
 """
 def nth_largest_element(arr, n):
-    if len(arr) == 0 or arr == None or n == 0:
+    if len(arr) == 0 or arr == None or n == 0 or n > len(arr):
         return None
     sort = False
     while not sort:
         sort = True
         for i in range(len(arr) - 1):
-            if arr[i] > arr[i + 1]:
+            if arr[i] < arr[i + 1]:
                 sort = False
                 arr[i], arr[i + 1] = arr[i + 1], arr[i]
     return arr[n - 1]
