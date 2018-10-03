@@ -1,3 +1,4 @@
+
 """
 matrix_multiply
 
@@ -54,6 +55,8 @@ def reverse_block(arr, n):
         return None
     if n > len(arr) or n == 0:
         return None
+    if len(arr) == 0 or n == 1:
+        return arr
     i = 0
     while i < len(arr):
         counter = 0
@@ -139,3 +142,4 @@ def spiral_matrix(arr):
                 
             l += 1
     return newArr
+
