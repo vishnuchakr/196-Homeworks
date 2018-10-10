@@ -1,43 +1,10 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Total points earned: 22
+Total points earned: 0
 
 Detailed test results:
 
-tester_matrix_multiply
-    _given: Correct
-    dim_mismatch: Correct
-    more: Correct
+No grade data is available. Review any messages below.
 
-tester_nth_largest_element
-At least one test in this suite failed.
-    _given: Correct
-    large: Failed
-    more: Correct
-    n_too_large: Correct
-
-tester_reverse_block
-At least one test in this suite failed.
-    _given: Correct
-    large: Correct
-    large_offset: Correct
-    small: Correct
-    small_offset: Correct
-    vacuous: Failed
-
-tester_spiral_matrix
-    _given: Correct
-    degenerate: Correct
-    dims_both_even: Correct
-    dims_both_odd: Correct
-    dims_even_square: Correct
-    dims_odd_even: Correct
-    dims_odd_square: Correct
-
-tester_subset_sum
-    _given: Correct
-    element_multi: Correct
-    more: Correct
-    negatives: Correct
-
-
+Additional messages:
+No file available for grading.
