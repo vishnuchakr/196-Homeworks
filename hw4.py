@@ -250,9 +250,3 @@ Example 2:
 """
 def zero_sum_subarray(arr):
     pass 
-
-
-print(most_common_char("Vis     hnuxxxxxxxxxxx"))
-print(alphabet_finder("wertyuiopASDhhhFGHJKLzxcvbnm abcdefhijklmnopqrstuvwxyzinsensitive paella"))
-print(alive_people([[1920, 80], [1940, 22], [1961, 10]]))
-print(three_sum([-1, 0, 1, 2, -1, -4], 0))
