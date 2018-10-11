@@ -132,8 +132,7 @@ def string_my_one_true_love(s):
         dictOfChars[i] += 1
     
     arr = list(dictOfChars.values())
-    
-    
+   
     changeCount = 0
     goodCount = 0
     diff = 0
@@ -156,7 +155,6 @@ def string_my_one_true_love(s):
         return True
     
     return False
-
 
 """
 alive_people
