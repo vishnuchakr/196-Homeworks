@@ -1,10 +1,81 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Total points earned: 0
+Total points earned: 14
 
 Detailed test results:
 
-No grade data is available. Review any messages below.
+tester_alive_people
+At least one test in this suite failed.
+    _given: Correct
+    disjoint: Failed
+    large: Failed
+    medium: Correct
+    more: Failed
+    not_in_place: Correct
+    overlap_all: Correct
+    overlap_edges: Failed
+    overlap_multi: Correct
 
-Additional messages:
-No file available for grading.
+tester_alphabet_finder
+At least one test in this suite failed.
+    _given: Failed
+    case_insensitivity: Failed
+    long: Correct
+    more: Correct
+
+tester_happy_numbers
+At least one test in this suite failed.
+    _given: Failed
+    efficiency: Failed
+    medium: Failed
+    more: Failed
+    more_large: Failed
+    small: Failed
+
+tester_longest_unique_subarray
+At least one test in this suite failed.
+    _given: Exception
+    large: Exception
+    medium: Exception
+    more: Exception
+    not_in_place: Exception
+    small: Exception
+    tiebreaker: Exception
+
+tester_most_common_char
+At least one test in this suite failed.
+    _given: Exception
+    large: Correct
+    more: Exception
+    ties: Correct
+
+tester_string_my_one_true_love
+At least one test in this suite failed.
+    _given: Failed
+    empty: Failed
+    freq_many: Failed
+    freq_one: Failed
+    large: Failed
+    medium: Failed
+    more: Failed
+
+tester_three_sum
+At least one test in this suite failed.
+    _given: Correct
+    large: Failed
+    more: Correct
+    no_triplets: Correct
+    not_in_place: Correct
+    repeated: Correct
+
+tester_zero_sum_subarray
+At least one test in this suite failed.
+    _given: Exception
+    large: Failed
+    medium: Failed
+    more: Failed
+    not_in_place: Failed
+    tiebreaker: Failed
+    vacuous: Failed
+
+
