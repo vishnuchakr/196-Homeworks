@@ -16,9 +16,9 @@ def most_common_char(s):
     if len(s) == 0:
         return None
     
-    alphabet = list('abcdefghijklmnopqrstuvwxyz ')
+    alphabet = list('abcdefghijklmnopqrstuvwxyz. ')
     s = s.lower()
-    characterCount = [0] * 27
+    characterCount = [0] * 28
     
     for i in s:
         characterCount[alphabet.index(i)] += 1
@@ -57,14 +57,15 @@ def alphabet_finder(s):
     arr = []
     returnString = ''
     
+    input = s
+    #measure substring of s and input, set s = input after you find the required prefix.
     s = s.lower()
-    for i in s:
-        if i in alphabet:
-            alphabet.remove(i)
-        arr += i
+    for i in range(0, len(s)):
+        if s[i] in alphabet:
+            alphabet.remove(s[i])
+        arr += input[i]
         if len(alphabet) == 0:
             return returnString.join(arr)
-    
     return None
 
 """
