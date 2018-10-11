@@ -16,22 +16,19 @@ def most_common_char(s):
     if len(s) == 0:
         return None
     
-    alphabet = list('abcdefghijklmnopqrstuvwxyz. ')
-    s = s.lower()
-    characterCount = [0] * 28
-    
+    dictOfChars = {i : 0 for i in s}
     for i in s:
-        characterCount[alphabet.index(i)] += 1
+        dictOfChars[i] += 1
     
     max = 0
-    index = 0
-    for i in range(0, len(characterCount)):
-        if characterCount[i] > max:
-            max = characterCount[i]
-            index = i
+    char = ''
+    for key in dictOfChars:
+        if dictOfChars[key] > max:
+            max = dictOfChars[key]
+            char = key
+            
+    return char
     
-    return alphabet[index]
-
 """
 alphabet_finder
 
@@ -53,6 +50,7 @@ Example 2:
 		None
 """
 def alphabet_finder(s):
+    
     alphabet = list('abcdefghijklmnopqrstuvwxyz')
     arr = []
     returnString = ''
@@ -67,7 +65,7 @@ def alphabet_finder(s):
         if len(alphabet) == 0:
             return returnString.join(arr)
     return None
-
+    
 """
 longest_unique_subarray
 
@@ -127,7 +125,37 @@ Example 3:
 		False
 """
 def string_my_one_true_love(s):
-	pass
+    dictOfChars = {i : 0 for i in s}
+    returnBool = True
+    
+    for i in s:
+        dictOfChars[i] += 1
+    
+    arr = list(dictOfChars.values())
+    
+    
+    changeCount = 0
+    goodCount = 0
+    diff = 0
+    maxDiff = 0
+    for i in range(0, len(arr) - 1):
+        
+        if arr[i] != arr[i + 1]:
+            returnBool = False
+            diff = abs(arr[i + 1] - arr[i])
+            goodCount = arr[i]
+            
+            for j in range(i, len(arr)):
+                if arr[j] != goodCount:
+                    changeCount += diff
+                    
+            if diff > maxDiff:
+                maxDiff = diff
+    
+    if (returnBool == True) or (maxDiff <= 1 and changeCount <= 1) or (1 + diff == goodCount):
+        return True
+    
+    return False
 
 
 """
@@ -251,3 +279,7 @@ Example 2:
 """
 def zero_sum_subarray(arr):
     pass 
+
+print(most_common_char("vishnussazxacxzvasdbvdsfbvccddx//...//uu"))
+print(alive_people([[1920, 1], [1940, 1], [1961, 1]]))
+print(string_my_one_true_love("aaabbbcccddde"))
