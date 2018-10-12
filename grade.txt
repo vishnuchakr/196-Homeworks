@@ -1,6 +1,6 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Total points earned: 14
+Total points earned: 18
 
 Detailed test results:
 
@@ -17,9 +17,8 @@ At least one test in this suite failed.
     overlap_multi: Correct
 
 tester_alphabet_finder
-At least one test in this suite failed.
-    _given: Failed
-    case_insensitivity: Failed
+    _given: Correct
+    case_insensitivity: Correct
     long: Correct
     more: Correct
 
@@ -43,10 +42,9 @@ At least one test in this suite failed.
     tiebreaker: Exception
 
 tester_most_common_char
-At least one test in this suite failed.
-    _given: Exception
+    _given: Correct
     large: Correct
-    more: Exception
+    more: Correct
     ties: Correct
 
 tester_string_my_one_true_love
