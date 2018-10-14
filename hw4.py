@@ -125,6 +125,9 @@ Example 3:
 		False
 """
 def string_my_one_true_love(s):
+    if (len(s) == 0 or s == None):
+        return True
+    
     dictOfChars = {i : 0 for i in s}
     returnBool = True
     
@@ -132,7 +135,7 @@ def string_my_one_true_love(s):
         dictOfChars[i] += 1
     
     arr = list(dictOfChars.values())
-   
+    
     changeCount = 0
     goodCount = 0
     diff = 0
@@ -155,6 +158,8 @@ def string_my_one_true_love(s):
         return True
     
     return False
+    
+
 
 """
 alive_people
@@ -244,8 +249,26 @@ Example 2:
 		4294967296 ** (1 / 16) (i.e., 4)
 """
 def happy_numbers(n):
-	pass
-
+    if (n == 0):
+        return 0
+    
+    def ishappy(x):
+        nums = []
+        while x != 1:
+            x = sum(int(i)**2 for i in str(x))
+            if x in nums:
+                return False
+            nums.append(x)
+        return True
+    
+    count = 0
+    for i in range(1, n + 1):
+        if ishappy(i):
+            count += 1
+    
+    return count
+    
+    
 
 """
 zero_sum_subarray
@@ -280,4 +303,5 @@ def zero_sum_subarray(arr):
 
 print(most_common_char("vishnussazxacxzvasdbvdsfbvccddx//...//uu"))
 print(alive_people([[1920, 1], [1940, 1], [1961, 1]]))
-print(string_my_one_true_love("aaabbbcccddde"))
+print(string_my_one_true_love("aaabcb"))
+print(happy_numbers(34))
