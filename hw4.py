@@ -300,8 +300,3 @@ Example 2:
 """
 def zero_sum_subarray(arr):
     pass 
-
-print(most_common_char("vishnussazxacxzvasdbvdsfbvccddx//...//uu"))
-print(alive_people([[1920, 1], [1940, 1], [1961, 1]]))
-print(string_my_one_true_love("aaabcb"))
-print(happy_numbers(34))
