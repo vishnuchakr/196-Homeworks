@@ -1,6 +1,6 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Total points earned: 18
+Total points earned: 24
 
 Detailed test results:
 
@@ -23,13 +23,12 @@ tester_alphabet_finder
     more: Correct
 
 tester_happy_numbers
-At least one test in this suite failed.
-    _given: Failed
-    efficiency: Failed
-    medium: Failed
-    more: Failed
-    more_large: Failed
-    small: Failed
+    _given: Correct
+    efficiency: Correct
+    medium: Correct
+    more: Correct
+    more_large: Correct
+    small: Correct
 
 tester_longest_unique_subarray
 At least one test in this suite failed.
