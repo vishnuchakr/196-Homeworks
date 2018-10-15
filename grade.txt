@@ -1,78 +1,82 @@
-Grade report for repo fa18-hws-vishnuchakr
+Grade report for repo {}
 
-Total points earned: 24
+Points earned: fa18-hws-vishnuchakr
+------------------------------------------------------------
 
 Detailed test results:
 
 tester_alive_people
-At least one test in this suite failed.
-    _given: Correct
-    disjoint: Failed
-    large: Failed
-    medium: Correct
-    more: Failed
-    not_in_place: Correct
-    overlap_all: Correct
-    overlap_edges: Failed
-    overlap_multi: Correct
+At least one test in this test class failed.
+    _given                            ok
+    disjoint                      Failed
+    large                         Failed
+    medium                            ok
+    more                          Failed
+    not_in_place                      ok
+    overlap_all                       ok
+    overlap_edges                 Failed
+    overlap_multi                     ok
 
 tester_alphabet_finder
-    _given: Correct
-    case_insensitivity: Correct
-    long: Correct
-    more: Correct
+At least one test in this test class failed.
+    _given                            ok
+    case_insensitivity                ok
+    long                              ok
+    more                              ok
 
 tester_happy_numbers
-    _given: Correct
-    efficiency: Correct
-    medium: Correct
-    more: Correct
-    more_large: Correct
-    small: Correct
+At least one test in this test class failed.
+    _given                            ok
+    efficiency                        ok
+    medium                            ok
+    more                              ok
+    more_large                        ok
+    small                             ok
 
 tester_longest_unique_subarray
-At least one test in this suite failed.
-    _given: Exception
-    large: Exception
-    medium: Exception
-    more: Exception
-    not_in_place: Exception
-    small: Exception
-    tiebreaker: Exception
+At least one test in this test class failed.
+    _given                     Exception
+    large                      Exception
+    medium                     Exception
+    more                       Exception
+    not_in_place               Exception
+    small                      Exception
+    tiebreaker                 Exception
 
 tester_most_common_char
-    _given: Correct
-    large: Correct
-    more: Correct
-    ties: Correct
+At least one test in this test class failed.
+    _given                            ok
+    large                             ok
+    more                              ok
+    ties                              ok
 
 tester_string_my_one_true_love
-At least one test in this suite failed.
-    _given: Failed
-    empty: Failed
-    freq_many: Failed
-    freq_one: Failed
-    large: Failed
-    medium: Failed
-    more: Failed
+At least one test in this test class failed.
+    _given                        Failed
+    empty                         Failed
+    freq_many                     Failed
+    freq_one                      Failed
+    large                         Failed
+    medium                        Failed
+    more                          Failed
 
 tester_three_sum
-At least one test in this suite failed.
-    _given: Correct
-    large: Failed
-    more: Correct
-    no_triplets: Correct
-    not_in_place: Correct
-    repeated: Correct
+At least one test in this test class failed.
+    _given                            ok
+    large                         Failed
+    more                              ok
+    no_triplets                       ok
+    not_in_place                      ok
+    repeated                          ok
 
 tester_zero_sum_subarray
-At least one test in this suite failed.
-    _given: Exception
-    large: Failed
-    medium: Failed
-    more: Failed
-    not_in_place: Failed
-    tiebreaker: Failed
-    vacuous: Failed
+At least one test in this test class failed.
+    _given                     Exception
+    large                         Failed
+    medium                        Failed
+    more                          Failed
+    not_in_place                  Failed
+    tiebreaker                 Exception
+    vacuous                       Failed
 
 
