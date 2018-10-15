@@ -1,6 +1,6 @@
-Grade report for repo {}
+Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: fa18-hws-vishnuchakr
+Points earned: 24
 ------------------------------------------------------------
 
 Detailed test results:
@@ -18,14 +18,12 @@ At least one test in this test class failed.
     overlap_multi                     ok
 
 tester_alphabet_finder
-At least one test in this test class failed.
     _given                            ok
     case_insensitivity                ok
     long                              ok
     more                              ok
 
 tester_happy_numbers
-At least one test in this test class failed.
     _given                            ok
     efficiency                        ok
     medium                            ok
@@ -44,7 +42,6 @@ At least one test in this test class failed.
     tiebreaker                 Exception
 
 tester_most_common_char
-At least one test in this test class failed.
     _given                            ok
     large                             ok
     more                              ok
