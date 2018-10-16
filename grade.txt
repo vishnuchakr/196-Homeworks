@@ -1,6 +1,6 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 25
+Points earned: 27
 ------------------------------------------------------------
 
 Detailed test results:
@@ -49,13 +49,13 @@ tester_most_common_char
 
 tester_string_my_one_true_love
 At least one test in this test class failed.
-    _given                        Failed
+    _given                            ok
     empty                             ok
     freq_many                     Failed
     freq_one                      Failed
     large                         Failed
     medium                        Failed
-    more                          Failed
+    more                              ok
 
 tester_three_sum
 At least one test in this test class failed.
