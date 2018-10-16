@@ -56,7 +56,7 @@ def alphabet_finder(s):
     returnString = ''
     
     input = s
-    #measure substring of s and input, set s = input after you find the required prefix.
+    
     s = s.lower()
     for i in range(0, len(s)):
         if s[i] in alphabet:
@@ -82,9 +82,33 @@ Example:
 		[1, 6]
 """
 def longest_unique_subarray(arr):
-	pass
-
-
+    dict = {}
+    if arr is None or len(arr) == 0:
+        return None
+    for i in range(0, len(arr)):
+        sublist = {}
+        count = i
+        while count < len(arr) and arr[count] not in sublist:
+            sublist[arr[count]] = count
+            count += 1
+        if i == 0:
+            dict = sublist
+        
+        minn = 0
+        minThis = min(sublist.values())
+        mincurrent = min(dict.values())
+        if len(sublist) > len(dict):
+            dict = sublist
+            minn = minThis
+        elif len(sublist) == len(dict) and minThis < mincurrent:
+            dict = sublist
+            minn = minThis
+        else:
+            minn = mincurrent
+            
+        return [minn, len(dict)]
+        
+        
 """
 string_my_one_true_love
 
@@ -127,7 +151,6 @@ Example 3:
 def string_my_one_true_love(s):
     if (len(s) == 0 or s == None):
         return True
-    
     dictOfChars = {i : 0 for i in s}
     returnBool = True
     
@@ -176,6 +199,9 @@ Example:
 		1961
 """
 def alive_people(data):
+    if (len(data) == 0):
+        return None
+    
     years = []
     
     for i in data:
@@ -299,4 +325,24 @@ Example 2:
 		[1, 2]
 """
 def zero_sum_subarray(arr):
-    pass 
+    lists = []
+    if arr is None or len(arr) == 0:
+        return None
+    for i in range(0, len(arr)):
+        count = i + 1
+        sum = arr[i]
+        sublist = []
+        sublist.append(i)
+        while count < len(arr) and sum != 0:
+            sum += arr[count]
+            sublist.append(count)
+            count += 1
+        if sum == 0:
+            lists.append(sublist)
+    if len(lists) == 0:
+        return None
+    if len(lists) > 1:
+        if lists[0][0] == lists[1][0] and len(lists[0]) > len(lists[1]):
+            return [lists[1][0], len(lists[1])]
+        
+    return [lists[0][0], len(lists[0])]
