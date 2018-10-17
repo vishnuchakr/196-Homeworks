@@ -1,6 +1,6 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 32
+Points earned: 35
 ------------------------------------------------------------
 
 Detailed test results:
@@ -8,13 +8,13 @@ Detailed test results:
 tester_alive_people
 At least one test in this test class failed.
     _given                            ok
-    disjoint                      Failed
+    disjoint                          ok
     large                         Failed
     medium                            ok
-    more                          Failed
+    more                              ok
     not_in_place                      ok
     overlap_all                       ok
-    overlap_edges                 Failed
+    overlap_edges                     ok
     overlap_multi                     ok
 
 tester_alphabet_finder
@@ -51,11 +51,11 @@ tester_string_my_one_true_love
 At least one test in this test class failed.
     _given                        Failed
     empty                             ok
-    freq_many                         ok
+    freq_many                     Failed
     freq_one                      Failed
     large                         Failed
     medium                        Failed
-    more                          Failed
+    more                              ok
 
 tester_three_sum
 At least one test in this test class failed.
