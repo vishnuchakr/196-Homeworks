@@ -1,6 +1,6 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 24
+Points earned: 31
 ------------------------------------------------------------
 
 Detailed test results:
@@ -33,13 +33,13 @@ tester_happy_numbers
 
 tester_longest_unique_subarray
 At least one test in this test class failed.
-    _given                     Exception
-    large                      Exception
-    medium                     Exception
-    more                       Exception
-    not_in_place               Exception
-    small                      Exception
-    tiebreaker                 Exception
+    _given                        Failed
+    large                         Failed
+    medium                        Failed
+    more                          Failed
+    not_in_place                  Failed
+    small                         Failed
+    tiebreaker                    Failed
 
 tester_most_common_char
     _given                            ok
@@ -50,7 +50,7 @@ tester_most_common_char
 tester_string_my_one_true_love
 At least one test in this test class failed.
     _given                        Failed
-    empty                         Failed
+    empty                             ok
     freq_many                     Failed
     freq_one                      Failed
     large                         Failed
@@ -68,12 +68,12 @@ At least one test in this test class failed.
 
 tester_zero_sum_subarray
 At least one test in this test class failed.
-    _given                     Exception
+    _given                            ok
     large                         Failed
-    medium                        Failed
-    more                          Failed
-    not_in_place                  Failed
-    tiebreaker                 Exception
-    vacuous                       Failed
+    medium                            ok
+    more                              ok
+    not_in_place                      ok
+    tiebreaker                        ok
+    vacuous                           ok
 
 
