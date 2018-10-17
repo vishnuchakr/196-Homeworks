@@ -199,27 +199,21 @@ Example:
 		1961
 """
 def alive_people(data):
-    if (len(data) == 0):
-        return None
+    thisdict = {}
     
-    years = []
-    
-    for i in data:
-        for j in range(0, i[1] + 1):
-              years.append(i[0] + j)
-    
-    dictOfYears = {i : 0 for i in years}
-    for i in years:
-        dictOfYears[i] += 1
-    
-    returnYear = 0
-    max = 0
-    for i in dictOfYears:
-        if dictOfYears[i] > max:
-            max = dictOfYears[i]
-            returnYear = i
-    
-    return returnYear
+    for x in range(0, len(data)):
+        thisdict[data[x][0]] = 0
+        thisdict[data[x][0] + data[x][1] + 1] = 0
+        for people in data:
+            if people[0] <= data[x][0] and people[0] + people[1] >= data[x][0]:
+                thisdict[data[x][0]] += 1
+            if people[0] <= data[x][0] + data[x][1] + 1 and people[0] + people[1] >= data[x][0] + data[x][1] + 1:
+                thisdict[data[x][0] + data[x][1] + 1] += 1
+                
+    max_val = max(thisdict.values())
+    for year in sorted(thisdict):
+        if max_val == thisdict[year]:
+            return year
 
 """
 three_sum
