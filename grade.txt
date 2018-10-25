@@ -1,17 +1,56 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 0
+Points earned: 14
 ------------------------------------------------------------
 
-No grade data is available. Review any messages below.
+Detailed test results:
 
-Additional messages:
+tester_add_position
+At least one test in this test class failed.
+    _given                            ok
+    add_head                          ok
+    edges                             ok
+    head_longer                       ok
+    in_place                          ok
+    invalid_add                Exception
 
-Your code did not produce usable results with our autograder.
-Review the output below to see where an exception occurred.
+tester_find_cycle
+At least one test in this test class failed.
+    _given                        Failed
+    long_list                     Failed
+    more                          Failed
+    same_data                         ok
 
-Traceback (most recent call last):
-  File "/tmp/tmpbqit39kl/hw5-test-ag.py", line 4, in <module>
-    from hw5 import *
-ImportError: No module named 'hw5'
+tester_find_merge_point
+At least one test in this test class failed.
+    _given                            ok
+    larger                        Failed
+    more                              ok
+    not_merged                        ok
+    same_data                         ok
+
+tester_merge
+At least one test in this test class failed.
+    alternating                   Failed
+    given                      Exception
+    large                         Failed
+    mixed                         Failed
+    no_overlap                    Failed
+
+tester_remove_position
+At least one test in this test class failed.
+    _given                            ok
+    _remove_head                      ok
+    invalid                    Exception
+    larger                            ok
+    more                              ok
+    vacuous                    Exception
+
+tester_reverse_list
+At least one test in this test class failed.
+    edge_case                  Exception
+    given                         Failed
+    larger                        Failed
+    more                          Failed
+
 
