@@ -59,25 +59,25 @@ Example 2:
 """
 
 def add_position(head, data, position):
-    
-    A = head
+    #check invalid add
     count = 0
+    A = head
     while A:
         count += 1
         A = A.next_node
-        
-    if position > count:
-        return None
     
-    currentNode = head
+    if position < 0 or position > count:
+        return head
+    
+    start = head
     if position == 0:
-        return Node(data, head)
-    while currentNode != None:
-        if position > 1:
-            head = head.next_node
-            position -= 1
-            head.next_node = Node(data, head.next_node)
-    return currentNode
+        return Node(data, start)
+    while position > 1:
+        head = head.next_node
+        position -= 1
+    head.next_node = Node(data, head.next_node)
+    return start
+    
 
 """
 Given the head of a linked list and a position, remove the node at the given position.
@@ -98,6 +98,7 @@ Example:
 		a -> b -> d -> e
 """
 def remove_position(head, position):
+
     if position == 0:
         return head.next_node
         
@@ -107,8 +108,7 @@ def remove_position(head, position):
             current = current.next_node
         current.next_node = current.next_node.next_node
         return head
-        
-    
+
 
 
 """
@@ -132,18 +132,16 @@ Output:
 	None
 """
 def find_merge_point(head_a, head_b):
-    
-    data = []
+    '''
+    data = set()
     A = head_a
     B = head_b
     
-    while A:
-        data.append(A.data)
+    data.add(A.data)
+    while A.next_node:
+        data.add(A.data)
         A = A.next_node
-    
-    data = set(data)
-    
-    
+
     while B:
         if B.data in data:
             return B.data
@@ -175,7 +173,6 @@ def find_merge_point(head_a, head_b):
             B = B.next_node
     
     return B.data
-    '''
     
 
 """
@@ -211,6 +208,7 @@ Example:
 		e -> d -> c -> b -> a
 """
 def reverse_list(head):
+    '''
     current = head
     previous = None
     next = current.next_node
@@ -226,7 +224,7 @@ def reverse_list(head):
     head = previous
     
     return head.data
-
+    '''
 
 """
 Given the head of two sorted linked lists, merge them to form 1 sorted linked list.
