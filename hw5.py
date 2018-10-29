@@ -59,13 +59,24 @@ Example 2:
 """
 
 def add_position(head, data, position):
+    
+    A = head
+    count = 0
+    while A:
+        count += 1
+        A = A.next_node
+        
+    if position > count:
+        return None
+    
     currentNode = head
     if position == 0:
         return Node(data, head)
-    while position > 1:
-        head = head.next_node
-        position -= 1
-    head.next_node = Node(data, head.next_node)
+    while currentNode != None:
+        if position > 1:
+            head = head.next_node
+            position -= 1
+            head.next_node = Node(data, head.next_node)
     return currentNode
 
 """
@@ -121,6 +132,28 @@ Output:
 	None
 """
 def find_merge_point(head_a, head_b):
+    
+    data = []
+    A = head_a
+    B = head_b
+    
+    while A:
+        data.append(A.data)
+        A = A.next_node
+    
+    data = set(data)
+    
+    
+    while B:
+        if B.data in data:
+            return B.data
+        
+        else:
+            B = B.next_node
+       
+    return None
+
+    '''
     A = head_a
     B = head_b
     count = 0
@@ -142,6 +175,8 @@ def find_merge_point(head_a, head_b):
             B = B.next_node
     
     return B.data
+    '''
+    
 
 """
 Given the head of a linked list, determines whether or not there
@@ -211,3 +246,8 @@ Example:
 """
 def merge_lists(head_a, head_b):
 	pass
+
+a = Node(2, Node(6, Node(-8)))
+a1 = Node(3, a)
+a2 = Node(5, a)
+print(find_merge_point(a1, a2))
