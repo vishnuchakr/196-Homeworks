@@ -1,18 +1,18 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 14
+Points earned: 11
 ------------------------------------------------------------
 
 Detailed test results:
 
 tester_add_position
 At least one test in this test class failed.
-    _given                            ok
+    _given                        Failed
     add_head                          ok
-    edges                             ok
+    edges                         Failed
     head_longer                       ok
-    in_place                          ok
-    invalid_add                Exception
+    in_place                      Failed
+    invalid_add                   Failed
 
 tester_find_cycle
 At least one test in this test class failed.
@@ -24,10 +24,10 @@ At least one test in this test class failed.
 tester_find_merge_point
 At least one test in this test class failed.
     _given                            ok
-    larger                        Failed
+    larger                            ok
     more                              ok
     not_merged                        ok
-    same_data                         ok
+    same_data                     Failed
 
 tester_merge
 At least one test in this test class failed.
