@@ -98,7 +98,16 @@ Example:
 		a -> b -> d -> e
 """
 def remove_position(head, position):
-
+    #check invalid remove
+    count = 0
+    A = head
+    while A:
+        count += 1
+        A = A.next_node
+    
+    if position < 0 or position > count:
+        return head
+    
     if position == 0:
         return head.next_node
         
@@ -191,7 +200,24 @@ Example:
 		TRUE
 """
 def find_cycle(head):
-    pass
+    if head == None:
+        return False
+    
+    A = head
+    B = head
+    
+    while True:
+        A = A.next_node
+        if B.next_node != None:
+            B = B.next_node.next_node
+        else:
+            return False
+        
+        if A == None or B == None:
+            return False
+        
+        if A == B:
+            return True
 
 """
 Given the head of a linked list, reverse the linked list.
@@ -208,23 +234,15 @@ Example:
 		e -> d -> c -> b -> a
 """
 def reverse_list(head):
-    '''
-    current = head
-    previous = None
-    next = current.next_node
     
-    while current:
-        current = Node(previous)
-        
-        previous = current
-        current = next
-        if next:
-            next = next.next_node
+    A = None
+    while head:
+        temp = head
+        head = temp.next_node
+        temp.next_node = A
+        A = temp
+    return A
     
-    head = previous
-    
-    return head.data
-    '''
 
 """
 Given the head of two sorted linked lists, merge them to form 1 sorted linked list.
@@ -243,9 +261,25 @@ Example:
 		1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 """
 def merge_lists(head_a, head_b):
-	pass
-
-a = Node(2, Node(6, Node(-8)))
-a1 = Node(3, a)
-a2 = Node(5, a)
-print(find_merge_point(a1, a2))
+    if head_a == None:
+        return head_b
+    if head_b == None:
+        return head_a
+    
+    a = Node()
+    b = Node()
+    
+    while not (head_a == None or head_b == None):
+        if head_a.data < head_b.data:
+            c = head_a
+            head_a = head_a.next_node
+        else:
+            c = head_b
+            head_b = head_b.next_node
+            
+        b.next_node = c
+        b = b.next_node
+    
+    b.next_node = head_a or head_b
+    
+    return a.next_node
