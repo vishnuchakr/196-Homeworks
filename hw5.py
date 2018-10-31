@@ -261,15 +261,15 @@ Example:
 		1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 """
 def merge_lists(head_a, head_b):
-    if head_a == None:
+    if head_a is None:
         return head_b
-    if head_b == None:
+    if head_b is None:
         return head_a
     
     a = Node()
-    b = Node()
+    b = a
     
-    while not (head_a == None or head_b == None):
+    while not (head_a is None or head_b is None):
         if head_a.data < head_b.data:
             c = head_a
             head_a = head_a.next_node
