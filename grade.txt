@@ -1,6 +1,6 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 24
+Points earned: 29
 ------------------------------------------------------------
 
 Detailed test results:
@@ -28,12 +28,11 @@ At least one test in this test class failed.
     same_data                         ok
 
 tester_merge
-At least one test in this test class failed.
-    alternating                   Failed
-    given                      Exception
-    large                         Failed
-    mixed                         Failed
-    no_overlap                    Failed
+    alternating                       ok
+    given                             ok
+    large                             ok
+    mixed                             ok
+    no_overlap                        ok
 
 tester_remove_position
     _given                            ok
