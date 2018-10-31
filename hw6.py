@@ -79,14 +79,17 @@ Example 2:
 		(-1, -1)
 '''
 def matrix_binary_search(matrix, target):
-	pass
+	#sort 2d array, each element from each inner array
+    #binary search to find the index of the element
+    #extract the necessary tuple from this index
+    print(matrix.sort())
 
 
 '''
 rotate_matrix
 
 Given an NxN matrix, rotate the matrix to the left 90 degrees.
-This hould run in O(n) where n is the total size of the matrix. 
+This should run in O(n) where n is the total size of the matrix. 
 
 Example 1:
 	Input: [[1,2],[3,4]]
@@ -97,12 +100,15 @@ Example 2:
 	Return: [[3,6,9],[2,5,8],[1,4,7]]
 '''
 def rotate_matrix(matrix):
+    #initialize the copy matrix
     rotated = [[0 for i in range(len(matrix))] for j in range(len(matrix))]
     
+    #copy elements from the original into the copy matrix
     for i in range(0, len(matrix)):
         for j in range(0, len(matrix)):
             rotated[len(matrix) - 1 - j][i] = matrix[i][j]
     
+    #return
     return rotated
 	
 
@@ -138,8 +144,33 @@ Example 2:
 		1 -> 2
 '''
 def delete_duplicate(head):
-	pass
-
+    #check if the head is None
+    if head is None:
+        return None
+    
+    #initialize list and variables
+    data = []
+    newHead = current = head
+    temp = None
+    
+    #start the loop
+    while current:
+        #if the current node's data is in the list, remove this node
+        if current.data in data:
+            temp.next_node = current.next_node
+            
+        #else add this node's data to the list
+        else:
+            data.append(current.data)
+        
+        #store the last current node
+        temp = current
+        
+        #move to the next node
+        current = current.next_node
+        
+    #return
+    return newHead
 
 '''
 next_greatest
@@ -232,4 +263,4 @@ def eval_exp(s):
 
 
 
-rotate_matrix([[1,2,3],[4,5,6],[7,8,9]])
+matrix_binary_search([[1,2,3],[4,5,6],[7,8,9]], 5)
