@@ -199,7 +199,7 @@ Given a list of integers, return a new list composed of the next greater element
 for each index of the original index. 
 More formally, given a list A, return a new list B where B[i] = A[j],
 where j > i and A[j] is the first element greater than A[i]. 
-If there is no such value, B[i] = None.
+If there is no such value, B[i] = -1.
 
 This should run in O(n) time.
 
@@ -219,6 +219,7 @@ Example 2:
 		[2,3,4,5,-1]
 '''
 def next_greatest(A):
+    
 	pass
 
 
@@ -253,8 +254,23 @@ d will be positive.
 Your algorithm should run in O(n) time for full credit
 '''
 def mcking(L, d):
-	pass
-
+    #initialize variables
+    returnArr = []
+    temp = L[0]
+    
+    #loop through to append indices to returnArr
+    for i in range(1, len(L)):
+        if L[i] >= temp + d:
+            returnArr.append(i)
+            temp = L[i]
+    
+    #loop through to fill returnArr with -1
+    length = len(L) - len(returnArr)
+    for i in range(0, length):
+        returnArr.append(-1)
+    
+    #return
+    return returnArr
 
 '''
 eval_exp
@@ -286,4 +302,4 @@ def eval_exp(s):
             
 
 
-find_ring_size([1, 3, 0, 1])
+mcking([0,2,3,4], 2)
