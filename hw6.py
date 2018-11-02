@@ -47,18 +47,22 @@ Example:
 		2
 '''
 def find_ring_size(agents):
+    #initialize variables
     dictAgents = {i : 0 for i in agents}
     index = 0
     
+    #count agent references
     for i in range(0, len(agents)):
         index = agents[index]
         dictAgents[index] += 1
 
+    #determine ring size
     count = 0
     for i in dictAgents.values():
         if i >= 1:
             count += 1
-            
+    
+    #return    
     return count
 
 
