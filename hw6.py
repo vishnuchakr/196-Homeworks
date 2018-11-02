@@ -47,7 +47,19 @@ Example:
 		2
 '''
 def find_ring_size(agents):
-	pass
+    dictAgents = {i : 0 for i in agents}
+    index = 0
+    
+    for i in range(0, len(agents)):
+        index = agents[index]
+        dictAgents[index] += 1
+
+    count = 0
+    for i in dictAgents.values():
+        if i >= 1:
+            count += 1
+            
+    return count
 
 
 '''
@@ -79,10 +91,14 @@ Example 2:
 		(-1, -1)
 '''
 def matrix_binary_search(matrix, target):
-	#sort 2d array, each element from each inner array
-    #binary search to find the index of the element
-    #extract the necessary tuple from this index
-    print(matrix.sort())
+    #binary search through every matrix
+    #whatever number of binary search im on starting at 0, thats the x coordinate to return
+    #whatever index within the array im at that I find the target in, that index is the y coordinate to return
+    #if i dont find it, return (-1, -1)
+    count = 0 # this should count how many outer binary searches occur
+    
+    print(matrix)
+    
 
 
 '''
@@ -163,7 +179,7 @@ def delete_duplicate(head):
         else:
             data.append(current.data)
         
-        #store the last current node
+        #store the last node into temp
         temp = current
         
         #move to the next node
@@ -259,8 +275,11 @@ Example 2:
 		2
 '''
 def eval_exp(s):
-	pass
+    list = []
+    for i in s:
+        list.append(i)
+    print(list)
+            
 
 
-
-matrix_binary_search([[1,2,3],[4,5,6],[7,8,9]], 5)
+find_ring_size([1, 3, 0, 1])
