@@ -95,13 +95,33 @@ Example 2:
 		(-1, -1)
 '''
 def matrix_binary_search(matrix, target):
-    #binary search through every matrix
-    #whatever number of binary search im on starting at 0, thats the x coordinate to return
-    #whatever index within the array im at that I find the target in, that index is the y coordinate to return
-    #if i dont find it, return (-1, -1)
-    count = 0 # this should count how many outer binary searches occur
+
+    #binary search function
+    def binary_search(arr, t):
+        min = 0
+        max = len(arr) - 1
+        while True:
+            if max < min:
+                return -1
+            m = (min + max) // 2
+            if arr[m] < t:
+                min = m + 1
+            elif arr[m] > t:
+                max = m - 1
+            else:
+                return m
     
-    print(matrix)
+    #search through matrix for the target
+    col = -1
+    for i in range(0, len(matrix)):
+        if binary_search(matrix[i], target) != -1:
+            if matrix[i][binary_search(matrix[i], target)] == target:
+                return (i, col)
+        col += 1
+    
+    return (-1, -1)
+    
+
     
 
 
@@ -302,4 +322,4 @@ def eval_exp(s):
             
 
 
-mcking([0,2,3,4], 2)
+print(matrix_binary_search([[1,2,3],[8,11,16],[23,24,25]], 20))
