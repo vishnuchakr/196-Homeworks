@@ -239,9 +239,20 @@ Example 2:
 		[2,3,4,5,-1]
 '''
 def next_greatest(A):
+    list = []
+    for i in range(0, len(A)):
+        n = -1
+        for j in range(i + 1, len(A), 1):
+            if A[i] < A[j]:
+                n = A[j]
+                list.append(n)
+                break
+    list.append(-1)
+    return list
     
-	pass
-
+        
+    
+    
 
 '''
 mcking
@@ -315,11 +326,9 @@ Example 2:
 		2
 '''
 def eval_exp(s):
-    list = []
-    for i in s:
-        list.append(i)
-    print(list)
-            
-
-
-print(matrix_binary_search([[1,2,3],[8,11,16],[23,24,25]], 20))
+    str = s
+    for i in range(1, len(s)):
+        temp = s[i - 1]
+        if (s[i] == '(' and (temp != '+' and temp != '-' and temp != '*')):
+            str = s[:i] + '*' + s[i:]
+    return eval(str)
