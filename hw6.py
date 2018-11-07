@@ -97,30 +97,12 @@ Example 2:
 		(-1, -1)
 '''
 def matrix_binary_search(matrix, target):
-
-    #binary search function
-    def binary_search(arr, t):
-        min = 0
-        max = len(arr) - 1
-        while True:
-            if max < min:
-                return -1
-            m = (min + max) // 2
-            if arr[m] < t:
-                min = m + 1
-            elif arr[m] > t:
-                max = m - 1
-            else:
-                return m
-    
-    #search through matrix for the target
-    col = -1
+    if matrix is None:
+        return None
     for i in range(0, len(matrix)):
-        if binary_search(matrix[i], target) != -1:
-            if matrix[i][binary_search(matrix[i], target)] == target:
-                return (i, col)
-        col += 1
-    
+        for j in range(0, len(matrix[0])):
+            if matrix[i][j] == target:
+                return (i, j)
     return (-1, -1)
     
 
