@@ -47,6 +47,8 @@ Example:
 		2
 '''
 def find_ring_size(agents):
+    if len(agents) == 0:
+        return 0;
     #initialize variables
     dictAgents = {i : 0 for i in agents}
     index = 0
