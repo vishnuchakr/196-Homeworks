@@ -1,69 +1,17 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 15
+Points earned: 0
 ------------------------------------------------------------
 
-Detailed test results:
-
-tester_delete_duplicate
-At least one test in this test class failed.
-    efficiency                    Failed
-    given                             ok
-    large_list                    Failed
-    more                              ok
-    more_small_lists              Failed
-    no_duplicates                 Failed
-    no_head                           ok
-
-tester_eval_exp
-    annoying                          ok
-    given                             ok
-
-tester_find_ring
-At least one test in this test class failed.
-    efficiency                    Failed
-    given                             ok
-    large_ring                 Exception
-    no_ring                       Failed
-    small_rings                       ok
-
-tester_matrix_binary_search
-At least one test in this test class failed.
-    efficiency                    Failed
-    given                             ok
-    larger                        Failed
-    not_in_matrix                     ok
-    single_element                Failed
-    small                         Failed
-
-tester_mc_king
-At least one test in this test class failed.
-    given                             ok
-    large_everywhere              Failed
-    large_not_available               ok
-    more                          Failed
-    one_restaurant                    ok
-
-tester_next_greatest
-At least one test in this test class failed.
-    efficiency                    Failed
-    given                             ok
-    larger                        Failed
-    no_greater                    Failed
-    small_inputs                      ok
-
-tester_rotate_matrix
-At least one test in this test class failed.
-    efficiency                    Failed
-    given                             ok
-    large                         Failed
-    one_element_matrix            Failed
-    small_matrix                  Failed
+No grade data is available. Review any messages below.
 
 Additional messages:
 
-Your code did not stop in time on the autograder (300 seconds)
+Your code did not produce usable results with our autograder.
+Review the output below to see where an exception occurred.
 
-Your code crashed our autograder before all tests completed.
-This is usually due to memory exhaustion, or excessive output from `print` statements.
-The 'tester_rotate_matrix/given' test was the last to run properly. All tests after that are marked as failures.
+  File "/tmp/tmpsusqbv0e/hw6-test-ag.py", line 264
+    from io import StringIO
+       ^
+SyntaxError: invalid syntax
+
