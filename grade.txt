@@ -1,6 +1,6 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 19
+Points earned: 22
 ------------------------------------------------------------
 
 Detailed test results:
@@ -24,8 +24,8 @@ At least one test in this test class failed.
     efficiency                    Failed
     given                             ok
     large_ring                    Failed
-    no_ring                       Failed
     small_rings                       ok
+    smallest_ring                     ok
 
 tester_matrix_binary_search
     efficiency                        ok
@@ -56,13 +56,7 @@ At least one test in this test class failed.
     efficiency                    Failed
     given                             ok
     large                         Failed
-    one_element_matrix            Failed
-    small_matrix                  Failed
+    one_element_matrix                ok
+    small_matrix                      ok
 
-Additional messages:
 
-Your code did not stop in time on the autograder (300 seconds)
-
-Your code crashed our autograder before all tests completed.
-This is usually due to memory exhaustion, or excessive output from `print` statements.
-The 'tester_rotate_matrix/given' test was the last to run properly. All tests after that are marked as failures.
