@@ -124,6 +124,8 @@ Example 2:
 	Return: [[3,6,9],[2,5,8],[1,4,7]]
 '''
 def rotate_matrix(matrix):
+    if len(matrix) == 0:
+        return []
     #initialize the copy matrix
     rotated = [[0 for i in range(len(matrix))] for j in range(len(matrix))]
     
@@ -176,12 +178,13 @@ def delete_duplicate(head):
     data = []
     newHead = current = head
     temp = None
-    
+    count = 0
     #start the loop
     while current:
         #if the current node's data is in the list, remove this node
         if current.data in data:
             temp.next_node = current.next_node
+            count += 1
             
         #else add this node's data to the list
         else:
@@ -192,7 +195,10 @@ def delete_duplicate(head):
         
         #move to the next node
         current = current.next_node
-        
+    
+    #return if no duplicates
+    if count == 0:
+        return head
     #return
     return newHead
 
@@ -224,6 +230,10 @@ Example 2:
 '''
 def next_greatest(A):
     list = []
+    if len(A) == 0:
+        return list
+    if len(A) == 1:
+        return A
     for i in range(0, len(A)):
         n = -1
         for j in range(i + 1, len(A), 1):
