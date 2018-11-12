@@ -1,18 +1,17 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 22
+Points earned: 28
 ------------------------------------------------------------
 
 Detailed test results:
 
 tester_delete_duplicate
-At least one test in this test class failed.
-    efficiency                    Failed
+    efficiency                        ok
     given                             ok
-    large_list                    Failed
+    large_list                        ok
     more                              ok
-    more_small_lists              Failed
-    no_duplicates                 Failed
+    more_small_lists                  ok
+    no_duplicates                     ok
     no_head                           ok
 
 tester_eval_exp
@@ -52,10 +51,9 @@ At least one test in this test class failed.
     small_inputs                      ok
 
 tester_rotate_matrix
-At least one test in this test class failed.
-    efficiency                    Failed
+    efficiency                        ok
     given                             ok
-    large                         Failed
+    large                             ok
     one_element_matrix                ok
     small_matrix                      ok
 
