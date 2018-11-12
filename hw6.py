@@ -126,16 +126,17 @@ Example 2:
 def rotate_matrix(matrix):
     if len(matrix) == 0:
         return []
-    #initialize the copy matrix
-    rotated = [[0 for i in range(len(matrix))] for j in range(len(matrix))]
     
-    #copy elements from the original into the copy matrix
-    for i in range(0, len(matrix)):
-        for j in range(0, len(matrix)):
-            rotated[len(matrix) - 1 - j][i] = matrix[i][j]
+    l = len(matrix)
+    for i in range(0, int(l / 2)):
+        for j in range(i, l - 1 - i):
+            tmp = matrix[i][j]
+            matrix[i][j] = matrix[j][l - 1 - i]
+            matrix[j][l - 1 - i] = matrix[l - 1 - i][l - 1 - j]
+            matrix[l - 1 - i][l - 1 - j] = matrix[l - 1 - j][i]
+            matrix[l - 1 - j][i] = tmp
     
-    #return
-    return rotated
+    return matrix            
 	
 
 
