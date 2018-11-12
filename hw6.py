@@ -178,13 +178,11 @@ def delete_duplicate(head):
     data = []
     newHead = current = head
     temp = None
-    count = 0
     #start the loop
     while current:
         #if the current node's data is in the list, remove this node
         if current.data in data:
             temp.next_node = current.next_node
-            count += 1
             
         #else add this node's data to the list
         else:
