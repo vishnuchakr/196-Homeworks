@@ -170,33 +170,20 @@ Example 2:
 		1 -> 2
 '''
 def delete_duplicate(head):
-    #check if the head is None
     if head is None:
         return None
     
-    #initialize list and variables
-    data = []
-    newHead = current = head
-    temp = None
-    #start the loop
+    current = head
+    prev = None
+    dict = {}
     while current:
-        #if the current node's data is in the list, remove this node
-        if current.data in data:
-            temp.next_node = current.next_node
-            
-        #else add this node's data to the list
+        if current.data in dict:
+            prev.next_node = current.next_node
         else:
-            data.append(current.data)
-        
-        #store the last node into temp
-        temp = current
-        
-        #move to the next node
+            dict[current.data] = current
+            prev = current
         current = current.next_node
-
-    #return
-    return newHead
-
+    return head
 '''
 next_greatest
 
