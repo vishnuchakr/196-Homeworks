@@ -193,10 +193,7 @@ def delete_duplicate(head):
         
         #move to the next node
         current = current.next_node
-    
-    #return if no duplicates
-    if count == 0:
-        return head
+
     #return
     return newHead
 
