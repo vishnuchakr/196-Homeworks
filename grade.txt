@@ -1,6 +1,6 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 22
+Points earned: 28
 ------------------------------------------------------------
 
 Detailed test results:
@@ -45,23 +45,16 @@ At least one test in this test class failed.
 tester_next_greatest
 At least one test in this test class failed.
     efficiency                    Failed
-    given                         Failed
-    larger                            ok
+    given                             ok
+    larger                        Failed
     no_greater                    Failed
-    small_inputs                  Failed
+    small_inputs                      ok
 
 tester_rotate_matrix
-At least one test in this test class failed.
-    efficiency                    Failed
-    given                         Failed
-    large                         Failed
-    one_element_matrix            Failed
-    small_matrix                  Failed
+    efficiency                        ok
+    given                             ok
+    large                             ok
+    one_element_matrix                ok
+    small_matrix                      ok
 
-Additional messages:
 
-Your code did not stop in time on the autograder (300 seconds)
-
-Your code crashed our autograder before all tests completed.
-This is usually due to memory exhaustion, or excessive output from `print` statements.
-The 'tester_next_greatest/no_greater' test was the last to run properly. All tests after that are marked as failures.
