@@ -224,8 +224,6 @@ def next_greatest(A):
                 n = A[j]
                 list.append(n)
                 break
-            else:
-                list.append(-1)
     list.append(-1)
     return list
     
