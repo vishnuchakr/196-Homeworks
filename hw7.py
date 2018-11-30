@@ -170,11 +170,14 @@ All values in the input list are unique.
 def longest_increasing_subsequence(arr):
     smallest = arr[0]
     sequence = [arr[0]]
-    for i in range(1, len(arr)):
+    for i in range(1, len(arr) - 1):
         if arr[i] < smallest:
             smallest = arr[i]
             sequence = []
-        sequence.append(arr[i])
+        if arr[i] < arr[i + 1]:
+            sequence.append(arr[i])
+    if arr[-1] > arr[-2]:
+        sequence.append(arr[-1])
     return len(sequence)
 
 
