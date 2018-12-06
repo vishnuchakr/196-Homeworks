@@ -1,60 +1,69 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 28
+Points earned: 4
 ------------------------------------------------------------
 
 Detailed test results:
 
-tester_delete_duplicate
-    efficiency                        ok
-    given                             ok
-    large_list                        ok
+tester_almost_product
+At least one test in this test class failed.
+    _given                            ok
+    large                         Failed
+    medium                        Failed
     more                              ok
-    more_small_lists                  ok
-    no_duplicates                     ok
-    no_head                           ok
+    no_division_easy                  ok
+    no_division_harsh          Exception
+    zeros                         Failed
 
-tester_eval_exp
-    given                             ok
-    more                              ok
-
-tester_find_ring
+tester_edit_distance
 At least one test in this test class failed.
-    efficiency                    Failed
-    given                             ok
-    large_ring                    Failed
-    small_rings                       ok
-    smallest_ring                     ok
+    _given                        Failed
+    medium_add_delete             Failed
+    medium_any                    Failed
+    one_large_add_delete          Failed
+    one_large_any                 Failed
+    small_add_delete              Failed
+    small_any                     Failed
 
-tester_matrix_binary_search
-    efficiency                        ok
-    given                             ok
-    larger                            ok
-    not_in_matrix                     ok
-    single_element                    ok
-    small                             ok
-
-tester_mc_king
+tester_longest_increasing_subsequence
 At least one test in this test class failed.
-    efficiency                        ok
-    given                             ok
-    lots_of_restaurants           Failed
-    more_small_lists              Failed
-    one_restaurant                    ok
+    _given                            ok
+    medium                        Failed
+    medium_not_increasing      Exception
+    small                         Failed
+    small_not_increasing          Failed
 
-tester_next_greatest
+tester_longest_palindromic_substring
 At least one test in this test class failed.
-    efficiency                    Failed
-    given                             ok
-    larger                        Failed
-    no_greater                    Failed
-    small_inputs                      ok
+    _given                     Exception
 
-tester_rotate_matrix
-    efficiency                        ok
-    given                             ok
-    large                             ok
-    one_element_matrix                ok
-    small_matrix                      ok
+tester_max_nesting
+At least one test in this test class failed.
+    _given                        Failed
+
+tester_maximal_sum_subarray
+At least one test in this test class failed.
+    _given                     Exception
+    large_easy                 Exception
+    large_stress               Exception
+    medium                     Exception
+    small                      Exception
+    small_all_negative         Exception
+
+tester_staircase_ways
+At least one test in this test class failed.
+    _given                        Failed
+    skip_none                     Failed
+    steps_huge_skip_huge       Exception
+    steps_huge_skip_large      Exception
+    steps_huge_skip_medium     Exception
+    steps_huge_skip_small      Exception
+    steps_large_skip_large     Exception
+    steps_large_skip_medium    Exception
+    steps_large_skip_small     Exception
+    steps_medium_skip_medium   Exception
+    steps_medium_skip_small    Exception
+    steps_none                    Failed
+    steps_small_skip_small     Exception
 
 
