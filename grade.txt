@@ -1,6 +1,6 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 4
+Points earned: 6
 ------------------------------------------------------------
 
 Detailed test results:
@@ -12,7 +12,7 @@ At least one test in this test class failed.
     medium                        Failed
     more                              ok
     no_division_easy                  ok
-    no_division_harsh          Exception
+    no_division_harsh                 ok
     zeros                         Failed
 
 tester_edit_distance
@@ -28,8 +28,10 @@ At least one test in this test class failed.
 tester_longest_increasing_subsequence
 At least one test in this test class failed.
     _given                            ok
+    large                             ok
+    large_not_increasing          Failed
     medium                        Failed
-    medium_not_increasing      Exception
+    medium_not_increasing         Failed
     small                         Failed
     small_not_increasing          Failed
 
@@ -40,6 +42,13 @@ At least one test in this test class failed.
 tester_max_nesting
 At least one test in this test class failed.
     _given                        Failed
+    large                         Failed
+    large_branching               Failed
+    large_ouro                    Failed
+    medium                        Failed
+    medium_ouro                Exception
+    small                         Failed
+    small_ouro                    Failed
 
 tester_maximal_sum_subarray
 At least one test in this test class failed.
