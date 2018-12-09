@@ -1,6 +1,6 @@
 Grade report for repo fa18-hws-vishnuchakr
 
-Points earned: 6
+Points earned: 9
 ------------------------------------------------------------
 
 Detailed test results:
@@ -61,7 +61,7 @@ At least one test in this test class failed.
 
 tester_staircase_ways
 At least one test in this test class failed.
-    _given                        Failed
+    _given                            ok
     skip_none                     Failed
     steps_huge_skip_huge       Exception
     steps_huge_skip_large      Exception
@@ -70,9 +70,9 @@ At least one test in this test class failed.
     steps_large_skip_large     Exception
     steps_large_skip_medium    Exception
     steps_large_skip_small     Exception
-    steps_medium_skip_medium   Exception
-    steps_medium_skip_small    Exception
-    steps_none                    Failed
-    steps_small_skip_small     Exception
+    steps_medium_skip_medium      Failed
+    steps_medium_skip_small       Failed
+    steps_none                        ok
+    steps_small_skip_small            ok
 
 
