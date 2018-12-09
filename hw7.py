@@ -146,10 +146,20 @@ Example 3:
 		13
 '''
 def staircase_ways(stairs, skip):
-    if skip == 1:
-        return 1
-    #do recursion, recurse backwards for the number of skip, base case above
-
+    skips = []
+    for i in range(1, skip + 1):
+        skips.append(i)
+    
+    def ways(stairs):
+        if stairs == 0:
+            return 1
+        numWays = 0
+        for i in skips:
+            if stairs - i >= 0:
+                numWays += ways(stairs - i)
+        return numWays
+    
+    return ways(stairs)
 
 '''
 longest_increasing_subsequence
@@ -180,7 +190,6 @@ def longest_increasing_subsequence(arr):
         sequence.append(arr[-1])
     return len(sequence)
 
-
 '''
 edit_distance
 
@@ -202,7 +211,7 @@ Example:
 		3
 '''
 def edit_distance(a, b):
-	pass
+    pass
 
 
 '''
@@ -218,7 +227,7 @@ Ungraded food for thought: what about if we took the maximal product instead?
 (This is a 374 DP problem.)
 '''
 def maximal_sum_subarray(arr):
-	pass
+    pass
 
 
 '''
@@ -242,5 +251,5 @@ Thank you for playing.
 - Andrew
 '''
 
-print(almost_product([3,6,9,-3,2,-2]))
-print(longest_increasing_subsequence([3, 2, 6, 4, 5, 8]))
+
+print(maximal_sum_subarray([1, 3, -5, 6, -1, 18, -70]))
